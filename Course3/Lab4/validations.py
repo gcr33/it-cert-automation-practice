@@ -20,7 +20,7 @@ def validate_user(username, minlen):
         return False
     return True
     # Usernames can't begin with a special character
-    if username[0] == "_" or username[0]== ".":
+    if re.match('^[a-z0-9._]*$',username[0]):
         return False
     return True
 	
